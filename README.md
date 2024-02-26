@@ -1,17 +1,18 @@
 # Description
-CLI tool for enchancing music files that were downloaded from third parties.
-Features:
-- Add lyrics
+CLI tool for enchancing music files that were downloaded from third parties.  
+Current list of features:
 - Add official Album Cover
-- Change names of artists and title to official one
-- if possible enchance sound quality (R&B, Classical or acoustic)
+- Add official album and song name
+- Modify names of artists and names of titles to the official one
 
-# Description
-This cli application helps to enhance music file changing its tags to official information
+Upcoming features:
+- Add lyrics
+- Enchance sound quality of music file
 
 ## Usage
+Input music should look like this: `Artist - title.mp3`
 ```bash
 enchanche_mp3 ./'Adelle - Hello.mp3'
 ```
-Music name template should look like this: `Artist - title.mp3`
+
 
