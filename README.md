@@ -1,13 +1,12 @@
 # Description
 CLI tool for enchancing music files that were downloaded from third parties.  
 Current list of features:
-- Add official Album Cover
-- Add official album and song name
-- Modify names of artists and names of titles to the official one
+- Change album cover to official one
+- Change artist, title and album cover name to its official.
 
 Upcoming features:
-- Add lyrics
-- Enchance sound quality of music file
+- Ability to add lyrics
+- Enchance sound quality of a music file
 
 ## Usage
 Input music should look like this: `Artist - title.mp3`
