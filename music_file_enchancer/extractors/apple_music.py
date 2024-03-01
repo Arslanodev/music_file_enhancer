@@ -1,8 +1,6 @@
 import cloudscraper
 
 from bs4 import BeautifulSoup
-from typing import Tuple
-
 
 from .extractors import Extractor_interface
 from music_file_enchancer.utils import url_encode, request_base_html
@@ -19,11 +17,11 @@ class Apple_Music_Template_Extractor(Extractor_interface):
         self.name = name
         self.session = session
 
-    def __gen_search_url(self):
+    def __gen_search_url(self) -> str:
         name = url_encode(self.name)
         return f"https://music.apple.com/us/search?term={name}"
 
-    def __main_op(self):
+    def __main_op(self) -> None | NotFoundError:
         # Generate search url
         url = self.__gen_search_url()
 
@@ -56,7 +54,7 @@ class Apple_Music_Template_Extractor(Extractor_interface):
         else:
             raise NotFoundError
 
-    def __get_music_names(self, search_res_html: BeautifulSoup) -> Tuple[str]:
+    def __get_music_names(self, search_res_html: BeautifulSoup) -> tuple[str, str]:
         """returns artist name and song name"""
         full_name = search_res_html.get("aria-label").split("·")
         song_name = full_name[0].strip()
@@ -71,7 +69,7 @@ class Apple_Music_Template_Extractor(Extractor_interface):
 
         return album_cover_url
 
-    def __get_album_desc(self, details_html: BeautifulSoup) -> Tuple[str]:
+    def __get_album_desc(self, details_html: BeautifulSoup) -> tuple[str, str]:
         """returns album name and genre name"""
         headings = details_html.find("div", class_="headings")
         album_name = headings.find("h1").text
