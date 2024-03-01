@@ -12,8 +12,13 @@ fuzzywuzzy = "^0.18.0"
 python-levenshtein = "^0.23.0"
 click = "^8.1.7"
 bs4 = "^0.0.1"
+requests = "^2.31.0"
+cloudscraper = "^1.2.71"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+enchance_mp3 = "music_file_enchancer.cli:enchance_mp3_file"

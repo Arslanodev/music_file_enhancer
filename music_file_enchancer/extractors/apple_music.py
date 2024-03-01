@@ -7,7 +7,7 @@ from music_file_enchancer.utils import url_encode, request_base_html
 from music_file_enchancer.extractors.extractors import NotFoundError
 
 
-DETAILS_URL_SELECTOR = "#scrollable-page > main > div > div.desktop-search-page.svelte-e9u219 > div:nth-of-type(1) > div > ul > li:nth-child(1) > div > div > div.top-search-lockup__action.svelte-ldozvk > a"
+DETAILS_URL_SELECTOR = "#scrollable-page > main > div > div.desktop-search-page.svelte-1n4lfae > div.section.svelte-gla0uw.with-top-spacing > div > ul > li:nth-child(1) > div > div > div.top-search-lockup__action.svelte-18iiq8y > a"
 
 
 class Apple_Music_Template_Extractor(Extractor_interface):

@@ -10,10 +10,13 @@ def runner(filepath):
 
     FILEPATH you input location of your music file
     """
+
+    # Get file extension
     filename = os.path.splitext(filepath)
     file_ext = filename[1]
     music_name = filename[0].split("/")[-1]
 
+    # Check if file extensions is supported
     if file_ext == ".mp3":
         print(music_name)
         obj = Standardize(music_name=music_name, filepath=filepath)
@@ -27,7 +30,9 @@ def runner(filepath):
 )
 @click.argument("filepath", nargs=1)
 def enchance_mp3_file(filepath):
+    """function for getting input and run runner function"""
     isfile = os.path.isfile(filepath)
+    # Check if intput filepath is folder
     if isfile:
         runner(filepath)
     else:
@@ -37,3 +42,7 @@ def enchance_mp3_file(filepath):
                 continue
             else:
                 runner(fl_path)
+
+
+if __name__ == "__main__":
+    enchance_mp3_file()
