@@ -6,9 +6,15 @@ Current list of features:
 Upcoming features:
 - Ability to add lyrics
 - Enchance sound quality of a music file
+- Asyncrhonous execution
 
 ## Usage
-Input music should look like this: `Artist - title.mp3`
+Input music should look like this: `Artist - title.mp3`  
+with filepath:
 ```bash
 enchanche_mp3 ./'Adelle - Hello.mp3'
+```
+with folderpath:
+```bash
+enchance_mp3 /Users/Desktop/mp3
 ```
