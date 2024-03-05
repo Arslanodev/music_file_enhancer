@@ -21,4 +21,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-enchance_mp3 = "music_file_enchancer.cli:enchance_mp3_file"
+enhance_mp3 = "music_file_enchancer.cli:enchance_mp3_file"
