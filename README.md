@@ -1,5 +1,7 @@
 # Description
 CLI tool for enhancing music files that were downloaded from third parties.  
+
+<img src="https://github.com/Arslanodev/music_file_enhancer/blob/main/imgs/showcase_mp3.png" alt="showcase" width="400"/>
 Current list of features:
 - Change artist, title and album cover name to its official.
 
